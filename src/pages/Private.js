@@ -4,7 +4,7 @@ import { Routes, Route } from "react-router-dom";
 
 import Error from './Error';
 
-function Private({ children }) {
+function Private() {
   return (
     <Routes>
       <Route path='*' element={<Error />} />

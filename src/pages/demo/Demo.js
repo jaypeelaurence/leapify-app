@@ -1,10 +1,12 @@
 import React from 'react';
 
-import { Button } from 'ui/components';
+import ButtonComponent from './ButtonComponent';
 
 function Demo() {
   return (
-    <Button label="ASMPLE"/>
+    <div className="p-4 flex flex-col gap-4">
+      <ButtonComponent />
+    </div>
   );
 }
 

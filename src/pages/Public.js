@@ -5,7 +5,7 @@ import { Routes, Route } from "react-router-dom";
 import Error from './Error';
 import Demo from './demo';
 
-function Public({ children }) {
+function Public() {
   return (
     <Routes>
       <Route path='/demo' element={<Demo />} />
