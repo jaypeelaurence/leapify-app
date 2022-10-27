@@ -8,7 +8,7 @@ button:focus {
 }
 
 .btn {
-	@apply rounded rounded-md text-secondary transition px-[18px] py-3 text-xs;
+	@apply transition rounded rounded-md px-[18px] py-3 text-secondary text-xs;
 	line-height: 12px; 
 
   &:hover {
@@ -16,9 +16,14 @@ button:focus {
 	}
 
 	&:disabled {
-		@apply text-disabled bg-transparent;
+		@apply bg-transparent text-disabled;
+	}
+
+	& > div {
+		@apply flex flex-row items-center gap-2;
 	}
 }
+
 
 .primary {
   @apply bg-primary text-white;
@@ -28,7 +33,7 @@ button:focus {
 	}
 
 	&:disabled {
-		@apply text-white bg-disabled;
+		@apply bg-disabled text-white;
 	}
 }
 
@@ -36,11 +41,11 @@ button:focus {
   @apply bg-secondary text-white;
 
   &:hover {
-		@apply text-white;
+		@apply bg-secondary-dark text-white;
 	}
 
 	&:disabled {
-		@apply text-white bg-disabled;
+		@apply bg-disabled text-white;
 	}
 }
 
@@ -52,7 +57,7 @@ button:focus {
 	}
 
 	&:disabled {
-		@apply border-disabled bg-transparent text-disabled;
+		@apply bg-transparent border-disabled text-disabled;
 	}
 }
 
@@ -66,4 +71,12 @@ button:focus {
 
 .sm {
 	@apply px-[18px] py-3 text-xs;
+}
+
+.link {
+  @apply text-blue p-0;
+
+  &:hover {
+		@apply text-blue-dark;
+	}
 }

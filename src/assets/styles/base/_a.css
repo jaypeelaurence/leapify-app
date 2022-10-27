@@ -1,0 +1,11 @@
+a {
+	@apply text-blue;
+
+	&:hover {
+		@apply text-blue-dark;
+	}
+
+	&:focus {
+	  @apply text-blue-dark;
+	}
+}
