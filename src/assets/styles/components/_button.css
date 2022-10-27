@@ -1,0 +1,69 @@
+button,
+button:focus {
+  @apply outline-none;
+
+	&:disabled {
+		@apply bg-disabled;
+	}
+}
+
+.btn {
+	@apply rounded rounded-md text-secondary transition px-[18px] py-3 text-xs;
+	line-height: 12px; 
+
+  &:hover {
+		@apply text-primary;
+	}
+
+	&:disabled {
+		@apply text-disabled bg-transparent;
+	}
+}
+
+.primary {
+  @apply bg-primary text-white;
+
+  &:hover {
+		@apply bg-blue text-white;
+	}
+
+	&:disabled {
+		@apply text-white bg-disabled;
+	}
+}
+
+.secondary {
+  @apply bg-secondary text-white;
+
+  &:hover {
+		@apply text-white;
+	}
+
+	&:disabled {
+		@apply text-white bg-disabled;
+	}
+}
+
+.tertiary {
+  @apply border border border-disabled text-secondary;
+
+  &:hover {
+		@apply bg-transparent border-secondary text-secondary;
+	}
+
+	&:disabled {
+		@apply border-disabled bg-transparent text-disabled;
+	}
+}
+
+.lg {
+	@apply px-6 py-[18px] text-[16px];
+}
+
+.md {
+	@apply px-[22px] py-[14px] text-sm;
+}
+
+.sm {
+	@apply px-[18px] py-3 text-xs;
+}
