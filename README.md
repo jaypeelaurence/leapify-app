@@ -28,7 +28,7 @@ git commit -m 'Conventional commit message pattern'
 git checkout develop
 git pull
 git checkout 'your created branch'
-git rebase develp
+git rebase develop
 git push origin 'your created branch'
 
 Note: If you encounter conflict
@@ -46,7 +46,6 @@ Cheers
 ### Pushing stages
 
 ```
-Multistore
 dev -> master
 
 dev = git pull to develop branch -> git checkout test & git rebase develop & git push
