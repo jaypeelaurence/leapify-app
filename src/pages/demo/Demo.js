@@ -1,8 +1,10 @@
 import React from 'react';
 
+import { Button } from 'ui/components';
+
 function Demo() {
   return (
-    <h1>Demo</h1>
+    <Button label="ASMPLE"/>
   );
 }
 
