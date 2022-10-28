@@ -46,3 +46,26 @@ BadgeIcon.propTypes = {
 BadgeIcon.defaultProps = {
   count: 0,
 };
+
+export const BadgeAvatar = ({ count, icon, onClick }) => (
+  <button
+    type="button"
+    onClick={onClick}
+    className="badgeIcon"
+  >
+    <div className="icon">
+      {icon()}
+    </div>
+    {Boolean(count) && <Badge count={count} />}
+  </button>
+);
+
+BadgeAvatar.propTypes = {
+  count: PropTypes.number,
+  icon: PropTypes.instanceOf(Object).isRequired,
+  onClick: PropTypes.instanceOf(Function).isRequired,
+};
+
+BadgeAvatar.defaultProps = {
+  count: 0,
+};
