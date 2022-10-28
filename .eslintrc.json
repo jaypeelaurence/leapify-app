@@ -27,28 +27,29 @@
         }
       },
     "rules": {
-        "no-unused-vars": "error",
-        "import/order": [
-          "error",
-          {
-            "groups": ["builtin", "external", "internal"],
-            "pathGroups": [
-              {
-                "pattern": "react",
-                "group": "external",
-                "position": "before"
-              }
-            ],
-            "pathGroupsExcludedImportTypes": ["react"],
-            "newlines-between": "always"
-          }
-        ],
-        "react/function-component-definition": [
-          "error",
-          {
-            "namedComponents": ["function-declaration", "arrow-function"],
-            "unnamedComponents": "arrow-function"
-          }
-        ]
+      "no-unused-vars": "error",
+      "import/order": [
+        "error",
+        {
+          "groups": ["builtin", "external", "internal"],
+          "pathGroups": [
+            {
+              "pattern": "react",
+              "group": "external",
+              "position": "before"
+            }
+          ],
+          "pathGroupsExcludedImportTypes": ["react"],
+          "newlines-between": "always"
+        }
+      ],
+      "react/function-component-definition": [
+        "error",
+        {
+          "namedComponents": ["function-declaration", "arrow-function"],
+          "unnamedComponents": "arrow-function"
+        }
+      ],
+      "max-len": [2, 100]
     }
 }
