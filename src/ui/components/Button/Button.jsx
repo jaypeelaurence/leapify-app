@@ -1,16 +1,22 @@
+/* eslint-disable react/jsx-props-no-spreading */
+
 import React from 'react';
 
 import cn from 'classnames';
 import PropTypes from 'prop-types';
 
-const Button = ({ label, icon, iconLeft, iconRight, className, ...props }) => {
+function Button({
+  label,
+  icon,
+  iconLeft,
+  iconRight,
+  className,
+  ...props
+}) {
   return (
     <button
       type="button"
-      className={cn(
-        'btn',
-        className
-      )}
+      className={cn('btn', className)}
       {...props}
     >
       <div>
@@ -20,7 +26,7 @@ const Button = ({ label, icon, iconLeft, iconRight, className, ...props }) => {
       </div>
     </button>
   );
-};
+}
 
 export default Button;
 
@@ -29,13 +35,13 @@ Button.propTypes = {
   label: PropTypes.string.isRequired,
   className: PropTypes.oneOfType([
     PropTypes.string,
-    PropTypes.arrayOf(PropTypes.sting)
+    PropTypes.arrayOf(PropTypes.sting),
   ]),
   onClick: PropTypes.func,
   disabled: PropTypes.bool,
   iconLeft: PropTypes.bool,
   iconRight: PropTypes.bool,
-  icon: PropTypes.instanceOf(Function)
+  icon: PropTypes.instanceOf(Function),
 };
 
 Button.defaultProps = {
@@ -45,5 +51,5 @@ Button.defaultProps = {
   disabled: false,
   iconLeft: false,
   iconRight: false,
-  icon: () => null 
+  icon: () => null,
 };
