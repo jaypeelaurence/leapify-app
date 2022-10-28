@@ -1,3 +1,6 @@
-import Button from './Button';
+/* eslint-disable import/prefer-default-export */
 
-export default { Button };
+import Button from './Button';
+import Badge from './Badge';
+
+export { Button, Badge };

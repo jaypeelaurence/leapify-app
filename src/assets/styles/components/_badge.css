@@ -1,0 +1,13 @@
+.badge {
+	@apply bg-danger;
+	@apply h-[20px] w-[20px];
+  @apply border border-white;
+	@apply rounded rounded-full;
+	@apply flex items-center;
+
+	& > div {
+		@apply m-auto;
+		@apply text-center text-[10px] text-white;
+		@apply font-semibold;
+	}
+}
