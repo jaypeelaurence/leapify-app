@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Avatar, { AvatarGroup } from 'ui/components/Avatar';
 import users from 'data/users.json';
+import Avatar, { AvatarGroup } from 'ui/components/Avatar';
 
 function AvatarComponent() {
   return (

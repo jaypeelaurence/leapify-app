@@ -44,7 +44,7 @@ export default {
       defaultValue: 'Left',
       description: 'Direction of Icon in the Button',
       options: ['Left', 'Right'],
-      control: { type: 'radio' },
+      control: 'radio',
     },
     onClick: {
       action: 'clicked',
