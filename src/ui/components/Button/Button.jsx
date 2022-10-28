@@ -46,8 +46,8 @@ Button.defaultProps = {
   onClick: () => null,
   type: 'button',
   className: null,
-  disabled: false,
-  left: false,
-  right: false,
+  disabled: null,
+  left: null,
+  right: null,
   icon: () => null,
 };

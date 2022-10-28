@@ -1,8 +1,10 @@
+/* eslint-disable react/jsx-props-no-spreading */
+
 import React, { useMemo } from 'react';
 
 import PropTypes from 'prop-types';
 
-function Badge({ count }) {
+const Badge = ({ count }) => {
   const renderCount = useMemo(() => (count > 99 ? 99 : count), [count]);
 
   return (
@@ -12,7 +14,7 @@ function Badge({ count }) {
       </div>
     </div>
   );
-}
+};
 
 export default Badge;
 
@@ -21,14 +23,14 @@ Badge.propTypes = {
 };
 
 Badge.defaultProps = {
-  count: 0,
+  count: null,
 };
 
-export const BadgeIcon = ({ count, icon, onClick }) => (
+export const BadgeIcon = ({ count, icon, ...props }) => (
   <button
     type="button"
-    onClick={onClick}
     className="badgeIcon"
+    {...props}
   >
     <div className="icon">
       {icon()}
@@ -40,32 +42,8 @@ export const BadgeIcon = ({ count, icon, onClick }) => (
 BadgeIcon.propTypes = {
   count: PropTypes.number,
   icon: PropTypes.instanceOf(Object).isRequired,
-  onClick: PropTypes.instanceOf(Function).isRequired,
 };
 
 BadgeIcon.defaultProps = {
-  count: 0,
-};
-
-export const BadgeAvatar = ({ count, icon, onClick }) => (
-  <button
-    type="button"
-    onClick={onClick}
-    className="badgeIcon"
-  >
-    <div className="icon">
-      {icon()}
-    </div>
-    {Boolean(count) && <Badge count={count} />}
-  </button>
-);
-
-BadgeAvatar.propTypes = {
-  count: PropTypes.number,
-  icon: PropTypes.instanceOf(Object).isRequired,
-  onClick: PropTypes.instanceOf(Function).isRequired,
-};
-
-BadgeAvatar.defaultProps = {
-  count: 0,
+  count: null,
 };

@@ -1,10 +1,8 @@
-/* eslint-disable */
-
 import React from 'react';
 
 import { FaBell } from 'react-icons/fa';
 
-import Badge, { BadgeIcon } from 'ui/components/Badge/Badge';
+import Badge, { BadgeIcon } from 'ui/components/Badge';
 
 function BadgeComponent() {
   return (
@@ -19,10 +17,10 @@ function BadgeComponent() {
         </div>
         <h1 className="text-md font-bold">BADGE W/ ICON</h1>
         <div className="flex gap-2">
-          <BadgeIcon count={0} icon={FaBell} onClick={() => null} />
-          <BadgeIcon count={1} icon={FaBell} onClick={() => null} />
-          <BadgeIcon count={10} icon={FaBell} onClick={() => null} />
-          <BadgeIcon count={100} icon={FaBell} onClick={() => null} />
+          <BadgeIcon count={0} icon={FaBell} />
+          <BadgeIcon count={1} icon={FaBell} />
+          <BadgeIcon count={10} icon={FaBell} />
+          <BadgeIcon count={100} icon={FaBell} />
         </div>
       </div>
     </div>

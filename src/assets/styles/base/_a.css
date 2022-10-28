@@ -8,4 +8,16 @@ a {
 	&:focus {
 	  @apply text-blue-dark;
 	}
+
+	&.lg {
+		@apply text-[14px];
+	}
+
+	&.md {
+		@apply text-xs;
+	}
+
+	&.sm {
+		@apply text-[10px];
+	}
 }

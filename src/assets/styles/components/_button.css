@@ -72,7 +72,7 @@ button:focus {
 
 	&.md {
 		@apply px-[22px] py-[14px];
-		@apply text-sm;
+		@apply text-[14px];
 	}
 
 	&.sm {

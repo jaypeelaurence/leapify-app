@@ -2,12 +2,16 @@ import React from 'react';
 
 import ButtonComponent from './ButtonComponent';
 import BadgeComponent from './BadgeComponent';
+import AvatarComponent from './AvatarComponent';
 
 function Demo() {
   return (
     <div className="p-4 flex flex-col gap-4">
       <ButtonComponent />
-      <BadgeComponent />
+      <div className="flex gap-4">
+        <BadgeComponent />
+        <AvatarComponent />
+      </div>
     </div>
   );
 }

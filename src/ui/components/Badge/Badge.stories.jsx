@@ -28,7 +28,6 @@ export default {
 };
 
 const Template = ({ type, hasNotification, ...args }) => {
-
   if (type === 'badge') {
     return (<Badge {...args} />);
   }
