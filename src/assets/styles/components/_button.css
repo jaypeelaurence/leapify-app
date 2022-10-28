@@ -8,7 +8,11 @@ button:focus {
 }
 
 .btn {
-	@apply transition rounded rounded-md px-[18px] py-3 text-secondary text-xs;
+	@apply transition ;
+	@apply rounded rounded-md;
+	@apply px-[18px] py-3;
+	@apply text-secondary text-xs;
+
 	line-height: 12px; 
 
   &:hover {
@@ -16,7 +20,8 @@ button:focus {
 	}
 
 	&:disabled {
-		@apply bg-transparent text-disabled;
+		@apply bg-transparent;
+		@apply text-disabled;
 	}
 
 	& > div {
@@ -26,57 +31,76 @@ button:focus {
 
 
 .primary {
-  @apply bg-primary text-white;
+  @apply bg-primary;
+  @apply text-white;
 
   &:hover {
-		@apply bg-blue text-white;
+		@apply bg-blue;
+		@apply text-white;
 	}
 
 	&:disabled {
-		@apply bg-disabled text-white;
+		@apply bg-disabled;
+		@apply text-white;
 	}
 }
 
 .secondary {
-  @apply bg-secondary text-white;
+  @apply bg-secondary;
+  @apply text-white;
 
   &:hover {
-		@apply bg-secondary-dark text-white;
+		@apply bg-secondary-dark;
+		@apply text-white;
 	}
 
 	&:disabled {
-		@apply bg-disabled text-white;
+		@apply bg-disabled;
+		@apply text-white;
 	}
 }
 
 .tertiary {
-  @apply border border border-disabled text-secondary;
+  @apply border border-disabled;
+  @apply text-secondary;
 
   &:hover {
-		@apply bg-transparent border-secondary text-secondary;
+		@apply bg-transparent;
+		@apply border-secondary;
+		@apply text-secondary;
 	}
 
 	&:disabled {
-		@apply bg-transparent border-disabled text-disabled;
+		@apply bg-transparent;
+		@apply border-disabled;
+		@apply text-disabled;
 	}
 }
 
 .lg {
-	@apply px-6 py-[18px] text-[16px];
+	@apply px-6 py-[18px];
+	@apply text-[16px];
 }
 
 .md {
-	@apply px-[22px] py-[14px] text-sm;
+	@apply px-[22px] py-[14px];
+	@apply text-sm;
 }
 
 .sm {
-	@apply px-[18px] py-3 text-xs;
+	@apply px-[18px] py-3;
+	@apply text-xs;
 }
 
 .link {
-  @apply text-blue p-0;
+  @apply p-0;
+  @apple text-blue;
 
   &:hover {
 		@apply text-blue-dark;
+	}
+
+	&:disabled {
+		@apply text-disabled;
 	}
 }
