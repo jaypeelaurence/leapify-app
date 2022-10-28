@@ -13,7 +13,10 @@ module.exports = {
       disabled: '#D0DEEA', 
       blue: '#0786E3',
       'blue-dark': '#1973E8',
-      white: '#FFFFFF' 
+      white: '#FFFFFF', 
+      danger: "#E22323",
+      success: "#20BA49",
+      warning: "#FFAB26",
     },
     fontFamily: {
       sans: ['var(--font-sans)'],
