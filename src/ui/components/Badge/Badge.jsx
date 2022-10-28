@@ -21,5 +21,28 @@ Badge.propTypes = {
 };
 
 Badge.defaultProps = {
-  count: 1,
+  count: 0,
+};
+
+export const BadgeIcon = ({ count, icon, onClick }) => (
+  <button
+    type="button"
+    onClick={onClick}
+    className="badgeIcon"
+  >
+    <div className="icon">
+      {icon()}
+    </div>
+    {Boolean(count) && <Badge count={count} />}
+  </button>
+);
+
+BadgeIcon.propTypes = {
+  count: PropTypes.number,
+  icon: PropTypes.instanceOf(Object).isRequired,
+  onClick: PropTypes.instanceOf(Function).isRequired,
+};
+
+BadgeIcon.defaultProps = {
+  count: 0,
 };

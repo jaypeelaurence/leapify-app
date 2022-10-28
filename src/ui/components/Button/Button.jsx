@@ -5,28 +5,26 @@ import React from 'react';
 import cn from 'classnames';
 import PropTypes from 'prop-types';
 
-function Button({
+const Button = ({
   label,
   icon,
-  iconLeft,
-  iconRight,
+  left,
+  right,
   className,
   ...props
-}) {
-  return (
-    <button
-      type="button"
-      className={cn('btn', className)}
-      {...props}
-    >
-      <div>
-        { !iconLeft ? null : icon() }
-        {label}
-        { !iconRight ? null : icon() }
-      </div>
-    </button>
-  );
-}
+}) => (
+  <button
+    type="button"
+    className={cn('btn', className)}
+    {...props}
+  >
+    <div>
+      { !left ? null : icon() }
+      {label}
+      { !right ? null : icon() }
+    </div>
+  </button>
+);
 
 export default Button;
 
@@ -39,8 +37,8 @@ Button.propTypes = {
   ]),
   onClick: PropTypes.func,
   disabled: PropTypes.bool,
-  iconLeft: PropTypes.bool,
-  iconRight: PropTypes.bool,
+  left: PropTypes.bool,
+  right: PropTypes.bool,
   icon: PropTypes.instanceOf(Function),
 };
 
@@ -49,7 +47,7 @@ Button.defaultProps = {
   type: 'button',
   className: null,
   disabled: false,
-  iconLeft: false,
-  iconRight: false,
+  left: false,
+  right: false,
   icon: () => null,
 };

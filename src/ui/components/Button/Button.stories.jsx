@@ -61,8 +61,8 @@ function Template({
 }) {
   const props = {
     icon: BsPlus,
-    iconLeft: iconDirection === 'Left' ? hasIcon : false,
-    iconRight: iconDirection === 'Right' ? hasIcon : false,
+    left: iconDirection === 'Left' ? hasIcon : false,
+    right: iconDirection === 'Right' ? hasIcon : false,
   };
 
   return (
@@ -71,8 +71,8 @@ function Template({
         type,
         size,
       )}
-      {...props}
       {...args}
+      {...props}
     />
   );
 }
@@ -99,8 +99,8 @@ const PARAMS = {
   controls: {
     exclude: [
       'className',
-      'iconRight',
-      'iconLeft',
+      'right',
+      'left',
       'type',
       'variant',
       'icon',

@@ -1,0 +1,27 @@
+.icon {
+	@apply text-[#718FA5] transition;
+
+	&:hover {
+		@apply text-primary;
+	}
+
+	&.primary {
+		@apply text-[#718FA5];
+	}
+
+	&.secondary {
+		@apply bg-[#002641];
+	}
+
+	&.tertiary {
+		@apply bg-[#002641];
+	}
+
+	&.disable {
+		@apply bg-disabled;
+	}
+
+	&.active {
+		@apply bg-primary;
+	}
+}

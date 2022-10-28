@@ -1,7 +1,7 @@
 .badge {
 	@apply bg-danger;
 	@apply h-[20px] w-[20px];
-  @apply border border-white;
+  @apply border-2 border-white;
 	@apply rounded rounded-full;
 	@apply flex items-center;
 
@@ -9,5 +9,19 @@
 		@apply m-auto;
 		@apply text-center text-[10px] text-white;
 		@apply font-semibold;
+	}
+}
+
+.badgeIcon {
+	@apply relative;
+
+	.badge {
+		@apply absolute top-[-6px] right-[-6px];
+	}
+
+	.icon {
+		& * {
+			@apply text-2xl;
+		}
 	}
 }

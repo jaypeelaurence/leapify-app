@@ -10,11 +10,91 @@ button:focus {
 .btn {
 	@apply transition ;
 	@apply rounded rounded-md;
+
+	line-height: 12px;
+
+	@apply btn-default;
+
 	@apply px-[18px] py-3;
-	@apply text-secondary text-xs;
+	@apply text-xs;
 
-	line-height: 12px; 
+ 	&.primary {
+	  @apply bg-primary;
+	  @apply text-white;
 
+	  &:hover {
+			@apply bg-blue;
+			@apply text-white;
+		}
+
+		&:disabled {
+			@apply bg-disabled;
+			@apply text-white;
+		}
+	}
+
+	&.secondary {
+	  @apply bg-secondary;
+	  @apply text-white;
+
+	  &:hover {
+			@apply bg-secondary-dark;
+			@apply text-white;
+		}
+
+		&:disabled {
+			@apply bg-disabled;
+			@apply text-white;
+		}
+	}
+
+	&.tertiary {
+	  @apply border border-disabled;
+	  @apply text-secondary;
+
+	  &:hover {
+			@apply bg-transparent;
+			@apply border-secondary;
+			@apply text-secondary;
+		}
+
+		&:disabled {
+			@apply bg-transparent;
+			@apply border-disabled;
+			@apply text-disabled;
+		}
+	}
+
+	&.lg {
+		@apply px-6 py-[18px];
+		@apply text-[16px];
+	}
+
+	&.md {
+		@apply px-[22px] py-[14px];
+		@apply text-sm;
+	}
+
+	&.sm {
+		@apply px-[18px] py-3;
+		@apply text-xs;
+	}
+
+	&.link {
+	  @apply p-0;
+	  @apple text-blue;
+
+	  &:hover {
+			@apply text-blue-dark;
+		}
+
+		&:disabled {
+			@apply text-disabled;
+		}
+	}
+}
+
+.btn-default {
   &:hover {
 		@apply text-primary;
 	}
@@ -26,81 +106,5 @@ button:focus {
 
 	& > div {
 		@apply flex flex-row items-center gap-2;
-	}
-}
-
-
-.primary {
-  @apply bg-primary;
-  @apply text-white;
-
-  &:hover {
-		@apply bg-blue;
-		@apply text-white;
-	}
-
-	&:disabled {
-		@apply bg-disabled;
-		@apply text-white;
-	}
-}
-
-.secondary {
-  @apply bg-secondary;
-  @apply text-white;
-
-  &:hover {
-		@apply bg-secondary-dark;
-		@apply text-white;
-	}
-
-	&:disabled {
-		@apply bg-disabled;
-		@apply text-white;
-	}
-}
-
-.tertiary {
-  @apply border border-disabled;
-  @apply text-secondary;
-
-  &:hover {
-		@apply bg-transparent;
-		@apply border-secondary;
-		@apply text-secondary;
-	}
-
-	&:disabled {
-		@apply bg-transparent;
-		@apply border-disabled;
-		@apply text-disabled;
-	}
-}
-
-.lg {
-	@apply px-6 py-[18px];
-	@apply text-[16px];
-}
-
-.md {
-	@apply px-[22px] py-[14px];
-	@apply text-sm;
-}
-
-.sm {
-	@apply px-[18px] py-3;
-	@apply text-xs;
-}
-
-.link {
-  @apply p-0;
-  @apple text-blue;
-
-  &:hover {
-		@apply text-blue-dark;
-	}
-
-	&:disabled {
-		@apply text-disabled;
 	}
 }

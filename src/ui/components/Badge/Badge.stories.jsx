@@ -2,24 +2,53 @@
 
 import React from 'react';
 
-import Badge from './Badge';
+import { FaBell } from 'react-icons/fa';
+import PropTypes from 'prop-types';
+
+import { BadgeIcon } from './Badge';
 import 'assets/styles/styles.css';
 
 export default {
   title: 'Components/Data Display/Badge',
-  component: Badge,
+  component: BadgeIcon,
   argTypes: {
     count: {
-      defaultValue: 0,
+      defaultValue: 100,
       description: 'Number of counts on the Badge',
     },
-  }
+    hasNotification: {
+      defaultValue: true,
+      description: 'Badge has notification',
+      control: 'boolean',
+    },
+  },
+  onClick: {
+    action: 'clicked',
+  },
 };
 
-function Template({ ...args }) {
+const Template = ({ hasNotification, ...args }) => {
+  const props = { count: !hasNotification ? 0 : args.count };
+
   return (
-    <Badge {...args} />
+    <BadgeIcon icon={FaBell} {...args} {...props} />
   );
-}
+};
+
+Template.propTypes = {
+  hasNotification: PropTypes.bool,
+};
+
+Template.defaultProps = {
+  hasNotification: true,
+};
 
 export const Default = Template.bind({});
+
+Default.parameters = {
+  controls: {
+    exclude: [
+      'icon',
+    ],
+  },
+};

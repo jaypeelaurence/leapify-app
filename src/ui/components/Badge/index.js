@@ -1,3 +1,5 @@
-import Badge from './Badge';
+import Badge, { BadgeIcon } from './Badge';
+
+export { BadgeIcon };
 
 export default Badge;
