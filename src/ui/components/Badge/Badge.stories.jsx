@@ -5,7 +5,7 @@ import React from 'react';
 import { FaBell } from 'react-icons/fa';
 import PropTypes from 'prop-types';
 
-import { BadgeIcon } from './Badge';
+import Badge, { BadgeIcon } from './Badge';
 import 'assets/styles/styles.css';
 
 export default {
@@ -27,28 +27,53 @@ export default {
   },
 };
 
-const Template = ({ hasNotification, ...args }) => {
-  const props = { count: !hasNotification ? 0 : args.count };
+const Template = ({ type, hasNotification, ...args }) => {
 
-  return (
-    <BadgeIcon icon={FaBell} {...args} {...props} />
-  );
+  if (type === 'badge') {
+    return (<Badge {...args} />);
+  }
+
+  if (type === 'icon') {
+    const props = { count: !hasNotification ? 0 : args.count };
+    console.log(props);
+
+    return (<BadgeIcon icon={FaBell} {...args} {...props} />);
+  }
+
+  return (<Badge {...args} />);
 };
 
 Template.propTypes = {
+  type: PropTypes.string,
   hasNotification: PropTypes.bool,
 };
 
 Template.defaultProps = {
+  type: 'badge',
   hasNotification: true,
 };
 
-export const Default = Template.bind({});
-
-Default.parameters = {
+const PARAMS = {
   controls: {
     exclude: [
+      'type',
       'icon',
     ],
   },
 };
+
+export const Default = Template.bind({});
+
+Default.args = {
+  type: 'badge',
+};
+
+Default.parameters = PARAMS;
+
+export const Icon = Template.bind({});
+
+Icon.args = {
+  type: 'icon',
+};
+
+Icon.parameters = PARAMS;

@@ -8,7 +8,7 @@ function ButtonComponent() {
   return (
     <div className="border rounded rounded-md p-4">
       <h1 className="text-6xl font-bold">Button Component</h1>
-      <div className="flex">
+      <div className="flex gap-x-2">
         <div className="flex flex-col gap-y-2">
           <h1 className="text-md font-bold">PRIMARY</h1>
           <div className="flex gap-2">
