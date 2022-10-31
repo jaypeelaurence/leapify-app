@@ -1,0 +1,27 @@
+button {
+	@apply text-[14px];
+
+	&:focus {
+	  @apply outline-none;
+	}
+
+	&:hover {
+		@apply text-blue;
+	}
+
+	&:disabled {
+		@apply bg-disabled;
+	}
+
+	&.lg {
+		@apply text-[16px];
+	}
+
+	&.md {
+		@apply text-[14px];
+	}
+
+	&.sm {
+		@apply text-xs;
+	}
+}

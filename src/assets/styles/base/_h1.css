@@ -1,0 +1,6 @@
+h1 {
+	@apply content;
+	@apply text-[48px];
+	@apply leading-[48px];
+	@apply font-semibold;
+}

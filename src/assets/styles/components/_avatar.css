@@ -70,7 +70,6 @@
 	&.md {
 		.avatar {
 			@apply h-10 w-10;
-			@apply text-[16px];
 		}
 	}
 
@@ -78,7 +77,6 @@
 		.avatar {
 			@apply h-6 w-6;
 			@apply ml-[-5px];
-			@apply text-xs;
 
 			&:nth-child(1) {
 				@apply m-0;

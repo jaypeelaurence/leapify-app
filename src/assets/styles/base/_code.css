@@ -1,0 +1,8 @@
+code {
+	@apply text-blue;
+	@apply italic;
+
+	&::before, &::after {
+		content: "`";
+	}
+}

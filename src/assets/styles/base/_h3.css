@@ -1,0 +1,6 @@
+h3 {
+	@apply content;
+	@apply text-[22px];
+	@apply leading-[22px];
+	@apply font-semibold;
+}

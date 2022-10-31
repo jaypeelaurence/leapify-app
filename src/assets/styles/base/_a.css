@@ -1,5 +1,5 @@
 a {
-	@apply text-blue;
+	@apply text-blue text-xs;
 
 	&:hover {
 		@apply text-blue-dark;

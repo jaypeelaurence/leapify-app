@@ -1,22 +1,12 @@
-button,
-button:focus {
-  @apply outline-none;
-
-	&:disabled {
-		@apply bg-disabled;
-	}
-}
-
 .btn {
 	@apply transition ;
 	@apply rounded rounded-md;
-
-	line-height: 12px;
 
 	@apply btn-default;
 
 	@apply px-[18px] py-3;
 	@apply text-xs;
+	@apply leading-3;
 
  	&.primary {
 	  @apply bg-primary;
@@ -65,6 +55,19 @@ button:focus {
 		}
 	}
 
+	&.link {
+	  @apply p-0 !important;
+	  @apple text-blue;
+
+	  &:hover {
+			@apply text-blue-dark;
+		}
+
+		&:disabled {
+			@apply text-disabled;
+		}
+	}
+
 	&.lg {
 		@apply px-6 py-[18px];
 		@apply text-[16px];
@@ -78,19 +81,6 @@ button:focus {
 	&.sm {
 		@apply px-[18px] py-3;
 		@apply text-xs;
-	}
-
-	&.link {
-	  @apply p-0;
-	  @apple text-blue;
-
-	  &:hover {
-			@apply text-blue-dark;
-		}
-
-		&:disabled {
-			@apply text-disabled;
-		}
 	}
 }
 

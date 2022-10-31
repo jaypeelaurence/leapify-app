@@ -1,2 +1,9 @@
 @import './base.css';
 @import './_a.css';
+@import './_h1.css';
+@import './_h2.css';
+@import './_h3.css';
+@import './_h4.css';
+@import './_button.css';
+@import './_p.css';
+@import './_code.css';

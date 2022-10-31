@@ -1,0 +1,6 @@
+h2 {
+	@apply content;
+	@apply text-[36px];
+	@apply leading-[36px];
+	@apply font-semibold;
+}

@@ -1,0 +1,6 @@
+h4 {
+	@apply content;
+	@apply text-[16px];
+	@apply leading-[18px];
+	@apply font-semibold;
+}

@@ -1,0 +1,51 @@
+.content {
+	@apply text-secondary;
+	@apply body;
+
+	&.primary {
+		@apply text-secondary;
+	}
+
+	&.secondary {
+		@apply text-[#718FA5];
+	}
+
+	&.tertiary {
+		@apply text-white;
+	}
+
+	&.title {
+		@apply text-lg;
+		@apply leading-5;
+	}
+
+	&.subtitle {
+		@apply text-[14px];
+		@apply leading-5;
+	}
+
+	&.footnote {
+		@apply text-[10px];
+		@apply leading-[18px];
+	}
+}
+
+.title {
+	@apply text-lg;
+	@apply leading-5;
+}
+
+.subtitle {
+	@apply text-[14px];
+	@apply leading-5;
+}
+
+.body {
+	@apply text-xs;
+	@apply leading-[18px];
+}
+
+.footnote {
+	@apply text-[10px];
+	@apply leading-[18px];
+}
