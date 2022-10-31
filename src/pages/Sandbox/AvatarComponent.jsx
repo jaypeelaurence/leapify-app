@@ -5,7 +5,7 @@ import Avatar, { AvatarGroup } from 'ui/components/Avatar';
 
 function AvatarComponent() {
   return (
-    <div className="border rounded rounded-md p-4">
+    <div className="card">
       <h1>Avatar Component</h1>
       <div className="flex gap-12">
         <div className="grid grid-cols-4 gap-2">

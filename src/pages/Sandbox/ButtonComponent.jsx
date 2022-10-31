@@ -6,7 +6,7 @@ import { Button } from 'ui/components';
 
 function ButtonComponent() {
   return (
-    <div className="border rounded rounded-md p-4">
+    <div className="popup">
       <h1>Button Component</h1>
       <div className="flex gap-4">
         <div className="flex flex-col gap-y-2">
