@@ -1,4 +1,4 @@
-/* eslint-disable */
+/* eslint-disable no-underscore-dangle, react/jsx-pascal-case, react/jsx-props-no-spreading */
 
 import React from 'react';
 
@@ -8,8 +8,10 @@ import PropTypes from 'prop-types';
 import 'assets/styles/styles.css';
 
 function _Content({ type, label, fontWeight }) {
+  const weight = `font-${fontWeight}`;
+
   return (
-    <p className={cn('content', type)}>
+    <p className={cn('content', type, weight)}>
       {label}
     </p>
   );
@@ -53,9 +55,7 @@ export default {
   },
 };
 
-const Template = ({
-  ...args
-}) => (<_Content {...args} />);
+const Template = (args) => (<_Content {...args} />);
 
 Template.propTypes = {
   label: PropTypes.string,
