@@ -3,12 +3,12 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 
 import Error from './Error';
-import Demo from './demo';
+import Sandbox from './Sandbox';
 
 function Public() {
   return (
     <Routes>
-      <Route path="/demo" element={<Demo />} />
+      <Route path="/sandbox" element={<Sandbox />} />
       <Route path="*" element={<Error />} />
     </Routes>
   );

@@ -6,32 +6,32 @@ import Avatar, { AvatarGroup } from 'ui/components/Avatar';
 function AvatarComponent() {
   return (
     <div className="border rounded rounded-md p-4">
-      <h1 className="text-6xl font-bold">Avatar Component</h1>
+      <h1>Avatar Component</h1>
       <div className="flex gap-12">
         <div className="grid grid-cols-4 gap-2">
           <div />
-          <h1 className="text-md font-bold">ICON</h1>
-          <h1 className="text-md font-bold">NAME</h1>
-          <h1 className="text-md font-bold">PROFILE</h1>
-          <div className="flex items-center text-md font-bold">LARGE</div>
+          <h4>ICON</h4>
+          <h4>NAME</h4>
+          <h4>PROFILE</h4>
+          <h4>LARGE</h4>
           <Avatar user={users[0]} className="lg" />
           <Avatar user={users[0]} className="lg" name />
           <Avatar user={users[0]} className="lg" profile />
-          <div className="flex items-center text-md font-bold">MEDIUM</div>
+          <h4>MEDIUM</h4>
           <Avatar user={users[0]} className="md" />
           <Avatar user={users[0]} className="md" name />
           <Avatar user={users[0]} className="md" profile />
-          <div className="flex items-center text-md font-bold">SMALL</div>
+          <h4>SMALL</h4>
           <Avatar user={users[0]} className="sm" />
           <Avatar user={users[0]} className="sm" name />
           <Avatar user={users[0]} className="sm" profile />
         </div>
         <div className="flex flex-col gap-y-2">
-          <h1 className="text-md font-bold">GROUP MEDIUM</h1>
+          <h4>GROUP MEDIUM</h4>
           <div className="flex gap-2">
             <AvatarGroup users={users} className="md" />
           </div>
-          <h1 className="text-md font-bold">GROUP SMALL</h1>
+          <h4>GROUP SMALL</h4>
           <div className="flex gap-2">
             <AvatarGroup users={users} className="sm" />
           </div>

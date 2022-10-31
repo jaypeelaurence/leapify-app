@@ -4,7 +4,7 @@ import ButtonComponent from './ButtonComponent';
 import BadgeComponent from './BadgeComponent';
 import AvatarComponent from './AvatarComponent';
 
-function Demo() {
+function Sandbox() {
   return (
     <div className="p-4 flex flex-col gap-4">
       <ButtonComponent />
@@ -16,4 +16,4 @@ function Demo() {
   );
 }
 
-export default Demo;
+export default Sandbox;
