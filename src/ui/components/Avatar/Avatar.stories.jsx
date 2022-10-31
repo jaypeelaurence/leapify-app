@@ -35,6 +35,9 @@ export default {
         Small: 'sm',
       },
     },
+    onClick: {
+      action: 'clicked',
+    },
   },
 };
 
@@ -45,22 +48,22 @@ const Template = ({
   ...args
 }) => {
   if (isGrouped) {
-    return (<AvatarGroup users={users} className={size} />);
+    return (<AvatarGroup users={users} className={size} {...args} />);
   }
 
   if (type === 'name') {
-    return (<Avatar user={users[0]} className={size} name {...args} />);
+    return (<Avatar user={users[1]} className={size} name {...args} />);
   }
 
   if (type === 'profile') {
-    return (<Avatar user={users[0]} className={size} profile {...args} />);
+    return (<Avatar user={users[1]} className={size} profile {...args} />);
   }
 
   if (type === 'icon') {
-    return (<Avatar user={users[0]} className={size} icon {...args} />);
+    return (<Avatar user={users[1]} className={size} icon {...args} />);
   }
 
-  return (<Avatar user={users[0]} className={size} icon {...args} />);
+  return (<Avatar user={users[1]} className={size} icon {...args} />);
 };
 
 Template.defaultProps = {
