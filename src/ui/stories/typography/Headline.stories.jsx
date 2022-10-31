@@ -1,8 +1,7 @@
-/* eslint-disable no-underscore-dangle, react/jsx-pascal-case */
+/* eslint-disable no-underscore-dangle, react/jsx-pascal-case, react/jsx-props-no-spreading */
 
 import React from 'react';
 
-import cn from 'classnames';
 import PropTypes from 'prop-types';
 
 import 'assets/styles/styles.css';
@@ -58,11 +57,7 @@ export default {
   },
 };
 
-const Template = ({
-  tag,
-  label,
-  fontWeight,
-}) => (<_Headlines tag={tag} label={label} fontWeight={fontWeight} />);
+const Template = (args) => (<_Headlines {...args} />);
 
 Template.propTypes = {
   tag: PropTypes.string,
