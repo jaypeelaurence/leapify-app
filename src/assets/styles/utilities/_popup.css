@@ -1,0 +1,4 @@
+.popup {
+	@apply card;
+	@apply shadow-md;
+}

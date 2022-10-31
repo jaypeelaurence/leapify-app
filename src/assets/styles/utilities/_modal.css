@@ -1,0 +1,4 @@
+.modal {
+	@apply card;
+	@apply shadow-lg;
+}
