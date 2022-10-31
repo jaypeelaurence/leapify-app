@@ -6,7 +6,7 @@ import AvatarComponent from './AvatarComponent';
 
 function Sandbox() {
   return (
-    <div className="p-4 flex flex-col gap-4">
+    <div className="background p-4 flex flex-col gap-4">
       <ButtonComponent />
       <div className="flex gap-4">
         <BadgeComponent />

@@ -6,7 +6,7 @@ import Badge, { BadgeIcon } from 'ui/components/Badge';
 
 function BadgeComponent() {
   return (
-    <div className="border rounded rounded-md p-4">
+    <div className="modal">
       <h1>Badge Component</h1>
       <div className="flex flex-col gap-y-2">
         <h4>BADGE</h4>
